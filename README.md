@@ -26,10 +26,10 @@
 
 
 ### D - JavaScript应用
-
+- [《基于MVC的JavaScript Web富应用开发》](./D.《基于MVC的JavaScript%20Web富应用开发》_Alex%20MacCaw_李晶等.md)
 
 ### E - JavaScript进阶
-* [《JavaScript异步编程》](E.《JavaScript异步编程》_Trevor Burnham_许青松)
+- [《JavaScript异步编程》](./E.《JavaScript异步编程》_Trevor%20Burnham_许青松.md)
 
 ### F - JQuery类库
 
