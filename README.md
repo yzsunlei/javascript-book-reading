@@ -55,5 +55,5 @@
 
 
 ### 写在最后
-- 如果希望在手机上查看，可以扫码关注我的公众号“派三派四”，后面我会把这些笔记陆续发布到公众号，欢迎关注
-- ![扫码关注公众号](http://cdn.yzsunlei.com/pai_study/qrcode_for_gh_ef1e79fe4f71_258.jpg)
+- 为了方便在手机上查看，后面我会把这些笔记陆续发布到公众号“派三派四”，可以扫码关注一下，欢迎关注。
+![扫码关注公众号](http://cdn.yzsunlei.com/pai_study/qrcode_for_gh_ef1e79fe4f71_258.jpg)
