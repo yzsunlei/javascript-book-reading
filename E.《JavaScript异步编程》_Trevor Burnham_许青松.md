@@ -1,6 +1,7 @@
 ﻿## 《JavaScript异步编程》精读笔记
 
 ### 写在前面
+- 书籍介绍：本书讲述基本的异步处理技巧，包括PubSub、事件模式、Promises等，通过这些技巧，可以更好的应对大型Web应用程序的复杂性，交互快速响应的代码。理解了JavaScript的异步模式可以让读者写出结构更合理、性能更出色、维护更方便的JavaScript程序。
 
 ### 第一章 深入理解JavaScript事件
 
@@ -159,3 +160,7 @@
 - 如果要求根据条件来加载脚本，请考虑像yepnope这样的脚本加载器。如果站点大量相互依赖的脚本，请考虑require.js
 
 ### 写在后面
+- pdf书籍、笔记思维导图、随书代码打包下载地址：[https://pan.baidu.com/s/1WMzAciLMfTasiWFQjz4ftA（提取码：wd01）](https://pan.baidu.com/s/1WMzAciLMfTasiWFQjz4ftA)
+- 纸质书京东购买地址：后面补上（推荐使用纸质书来学习）
+- 为了方便在手机上查看，后面我会把这些笔记陆续发布到公众号“派三派四”，可以扫码关注一下，欢迎关注。
+  ![扫码关注公众号](http://cdn.yzsunlei.com/pai_study/qrcode_for_gh_ef1e79fe4f71_258.jpg)
