@@ -1,4 +1,4 @@
-## JavaScript书籍精读
+## JavaScript书籍精读系列文章导航
 
 ### 写在前面
 - 去年我整理了一份[「前端工程师必备书籍清单.md」](https://github.com/yzsunlei/awesome-web-tutorial/blob/master/1.%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%BF%85%E5%A4%87%E4%B9%A6%E7%B1%8D%E6%B8%85%E5%8D%95.md)，得到很多人的关注。这份清单里面的书籍大部分我都看过了，但有些知识点难免看后就忘。之前看这些书对一些重点都进行了记录，最近一段时间计划把这些重点笔记整理下来。一方面让自己能通过快速翻阅来拾起知识点，另一方面希望能与更多志同道合的技术人进行交流。
@@ -28,10 +28,10 @@
 
 
 ### D - JavaScript应用
-- [《基于MVC的JavaScript Web富应用开发》](./D.《基于MVC的JavaScript%20Web富应用开发》_Alex%20MacCaw_李晶等.md)
+- [《基于MVC的JavaScript Web富应用开发》](https://github.com/yzsunlei/javascript-book-reading/blob/master/D.%E3%80%8A%E5%9F%BA%E4%BA%8EMVC%E7%9A%84JavaScript%20Web%E5%AF%8C%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E3%80%8B_Alex%20MacCaw_%E6%9D%8E%E6%99%B6%E7%AD%89.md)
 
 ### E - JavaScript进阶
-- [《JavaScript异步编程》](./E.《JavaScript异步编程》_Trevor%20Burnham_许青松.md)
+- [《JavaScript异步编程》](https://github.com/yzsunlei/javascript-book-reading/blob/master/E.%E3%80%8AJavaScript%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B%E3%80%8B_Trevor%20Burnham_%E8%AE%B8%E9%9D%92%E6%9D%BE.md)
 
 ### F - JQuery类库
 
