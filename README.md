@@ -29,6 +29,7 @@
 
 ### D - JavaScript应用
 - [《基于MVC的JavaScript Web富应用开发》](https://github.com/yzsunlei/javascript-book-reading/blob/master/D.%E3%80%8A%E5%9F%BA%E4%BA%8EMVC%E7%9A%84JavaScript%20Web%E5%AF%8C%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E3%80%8B_Alex%20MacCaw_%E6%9D%8E%E6%99%B6%E7%AD%89.md)
+- [《移动WEB前端高级开发实践》](https://github.com/yzsunlei/javascript-book-reading/blob/master/D.%E3%80%8A%E7%A7%BB%E5%8A%A8WEB%E5%89%8D%E7%AB%AF%E9%AB%98%E7%BA%A7%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5%E3%80%8B_iKcamp.md)
 
 ### E - JavaScript进阶
 - [《JavaScript异步编程》](https://github.com/yzsunlei/javascript-book-reading/blob/master/E.%E3%80%8AJavaScript%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B%E3%80%8B_Trevor%20Burnham_%E8%AE%B8%E9%9D%92%E6%9D%BE.md)
