@@ -53,7 +53,7 @@
 
 
 ### L - 附加系列
-
+- [《Web前端黑客技术揭秘》](https://github.com/yzsunlei/javascript-book-reading/blob/master/L.%E3%80%8AWeb%E5%89%8D%E7%AB%AF%E9%BB%91%E5%AE%A2%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98%E3%80%8B_%E9%92%9F%E6%99%A8%E9%B8%A3.md)
 
 ### 写在最后
 - 为了方便在手机上查看，后面我会把这些笔记陆续发布到公众号“派三派四”，可以扫码关注一下，欢迎关注。
