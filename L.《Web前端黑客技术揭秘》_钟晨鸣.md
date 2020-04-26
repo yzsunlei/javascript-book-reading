@@ -23,7 +23,7 @@
 
 #### 1.3.信任与信任关系
 - 安全类似木桶原理，短的那块板决定了木桶实际能装多少水。一个Web服务器，如果其上的网站没做好权限分离，没控制好信任关系，则整体安全性就由安全性最差的那个网站决定
-- 很多网站都嵌入了第三方的访问统计脚本，嵌入的方式是使用<script>标签引用，这时就等于建立了信任关系，如果第三方的统计脚本被黑客挂马，那么这些网站也都会被危及
+- 很多网站都嵌入了第三方的访问统计脚本，嵌入的方式是使用`<script>`标签引用，这时就等于建立了信任关系，如果第三方的统计脚本被黑客挂马，那么这些网站也都会被危及
 
 #### 1.4.社会工程学的作用
 - 常用的社工辅助技巧有：Google Hack、SNS垂直搜索、各种收集的数据库集合查询等
@@ -52,7 +52,7 @@
 - 很多前端安全问题就是因为松散导致的
 - 1.DOM树：很多数据都存在于DOM树中，通过DOM树的操作可以非常容易地获取到我们的隐私数据；隐私数据可能存储在以下位置（HTML内容中、浏览器本地存储中，如Cookies、URL地址中）
 - 2.iframe内嵌出一个开放的世界：iframe标签是HTML中一个非常重要的标签，也是Web安全中出镜频率最高的标签之一，很多网站都通过iframe嵌入第三方内容；iframe标签带来了很多便利，同时也带来了很多风险，比如，攻击者入侵一个网站后，可以通过iframe嵌入自己的网马页面，用户访问该网站后，被嵌入的网马页面就会执行；如果父页和子页之间是同域，那就很容易，父页可以通过调用子页的contentWindow来操作子页的DOM树，同理，子页可以调用父页的contentWindow来操作父页的DOM树。如果它们不同域，则必须遵守同源策略，但子页还是可以对父页的location进行写操作，这样可以让父页重定向到其他页面。不过对location的操作仅仅只是写权限，而没有读权限，这样就不能获取到父页location URL的内容，否则有可能会造成隐私数据泄露；
-- 3.HTML内嵌脚本执行：JavaScript脚本除了出现在JS格式文件里，被嵌入而执行外，还可以出现在HTML的<script></script>标签内、HTML的标签on事件中，以及一些标签的href、src等属性的伪协议（javascript：等）中；
+- 3.HTML内嵌脚本执行：JavaScript脚本除了出现在JS格式文件里，被嵌入而执行外，还可以出现在HTML的`<script></script>`标签内、HTML的标签on事件中，以及一些标签的href、src等属性的伪协议（javascript：等）中；
 
 #### 2.5.跨站之魂-JavaScript
 - 有了XSS漏洞，就意味着可以注入任意的JavaScript，有了JavaScript，就意味着被攻击者的任何操作都可以模拟，任何隐私信息都可以获取到
@@ -170,14 +170,14 @@
 #### 6.1.普通XSS漏洞自动化挖掘思路
 - 自动化的XSS漏洞挖掘其实是很复杂的，难度也会很高。这和我们要实现的XSS漏洞挖掘工具的需求有关，是要效率（有了广度，却忽略了深度），还是要检出率（既有广度又有深度，漏洞个数多且准确度高）
 - 工具自动化的思路，是一种针对反射型XSS、存储型XSS、头部XSS、CookieXSS等比较普通的XSS漏洞挖掘思路
-- URL上的玄机：URL的一种常见组成模式：<scheme>://<netloc>/<path>?<query>#<fragment>；
-- HTML上的玄机：两类特殊的标签<script>和<style>，它们是不能嵌套标签的，而且payload构造情况会更灵活；同样有意思的场景，比如这三类：1.输出在src/href/action等属性内；2.输出在on*事件内；3.输出在style属性内；对IE来说，在标签的style属性中只要能注入expression关键词，并进行适当的闭合，我们就可以认为目标存在XSS；
+- URL上的玄机：URL的一种常见组成模式：`<scheme>://<netloc>/<path>?<query>#<fragment>`；
+- HTML上的玄机：两类特殊的标签`<script>`和`<style>`，它们是不能嵌套标签的，而且payload构造情况会更灵活；同样有意思的场景，比如这三类：1.输出在src/href/action等属性内；2.输出在on*事件内；3.输出在style属性内；对IE来说，在标签的style属性中只要能注入expression关键词，并进行适当的闭合，我们就可以认为目标存在XSS；
 - 请求中的玄机：“探子请求”，在真正的payload攻击请求之前，总会发起一次无危害（不包含任何特殊符号）的请求，这个请求就像“探子”一样，来无影去无踪。不会被网站的过滤机制发现，就像一次正常的请求；“探子”的目的有以下两个（1.目标参数值是否会出现在响应上，如果不出现，就完全没必要进行后续的payload请求与分析；目标参数值出现在HTML的哪一个部分，从上面的分析我们已经知道，不同的HTML部分对待XSS的机制是不一样的，请求的payload当然也不一样）
 - 关于存储型xss挖掘：这里一般是表单的提交，然后进入服务端存储中，最终会在某个页面上输出
 
 #### 6.2.神奇的DOM渲染
 - HTML与JavaScript自解码机制：在JavaScript执行之前，HTML形式的编码会自动解码；
-- 具备htmlencode功能的标签：HTML在<textarea>中是不解析的。这样的标签还有title、iframe、noscript、noframes；textarea在HTML中的权重很高，允许html标签出现在<textarea><textarea>之间；
+- 具备htmlencode功能的标签：HTML在`<textarea>`中是不解析的。这样的标签还有title、iframe、noscript、noframes；textarea在HTML中的权重很高，允许html标签出现在`<textarea><textarea>`之间；
 - url编码差异
 - dom修正式渲染：view-source这样看到的“HTML编码”实际上是静态的；按F12键打开对应的调试工具，这些调试工具查看的源码是动态结果；浏览器在DOM渲染上进行各种修正，不同的浏览器进行的这种修正可能存在一些差异。这种修正式的渲染可以用于绕过浏览器的XSS Filter；
 - 一种dom fuzzing的技巧：模糊测试(fuzzing)；
@@ -195,14 +195,14 @@
 - Unicode字符集的编码方式有UTF-8、UTF-16、UTF-32、UTF-7，常见的是UTF-8与UTF-7
 - 编码的目的是最终将这些字符正确地转换为计算机可理解的二进制，对应的解码就是将二进制最终解码为人类可读的字符
 - 宽字符编码带来的安全问题：主要是吃ASCII字符（一字节）的现象；从前端到后端的流程中，字符集编码处理不一致可能导致SQL注入、命令执行等一系列安全问题；
-- UTF-7问题：UTF-7时Unicode字符集的一种编码方式，不过并非是标准推荐的，现在仅IE浏览器还支持UTF-7的解析；IE浏览器历史上出现以下好几类UTF-7 XSS（1.自动选择UTF-7编码；2.通过iframe方式调用外部UTF-7编码的HTML文件；不过现在IE限制了<iframe>只能嵌入同域内的UTF-7编码文件；3.通过link方式调用外部UTF-7编码的CSS文件；4.通过指定BOM文件头；BOM的全称为Byte Order Mark。即标记字节顺序码，只出现在Unicode字符集中，BOM出现在文件的最开始位置，软件通过识别文件的BOM来判断它的Unicode字符集编码方式）；在实际的攻击场景中，能控制目标网页开头部分的功能如下（用户自定义的CSS样式文件；JSON Callback类型的链接；）
+- UTF-7问题：UTF-7时Unicode字符集的一种编码方式，不过并非是标准推荐的，现在仅IE浏览器还支持UTF-7的解析；IE浏览器历史上出现以下好几类UTF-7 XSS（1.自动选择UTF-7编码；2.通过iframe方式调用外部UTF-7编码的HTML文件；不过现在IE限制了`<iframe>`只能嵌入同域内的UTF-7编码文件；3.通过link方式调用外部UTF-7编码的CSS文件；4.通过指定BOM文件头；BOM的全称为Byte Order Mark。即标记字节顺序码，只出现在Unicode字符集中，BOM出现在文件的最开始位置，软件通过识别文件的BOM来判断它的Unicode字符集编码方式）；在实际的攻击场景中，能控制目标网页开头部分的功能如下（用户自定义的CSS样式文件；JSON Callback类型的链接；）
 - 浏览器处理字符集编码BUG带来的安全问题：标准总是过于美好，比如字符集标准，但是每个浏览器在实施这些标准时不一定就能很好地实施，所以不要轻信它们不会出现BUG
 
 #### 6.6.绕过浏览器XSS Filter
 - 目前，主要是IE和Chrome两大浏览器拥有XSS Filter机制，不可能有完美的过滤器
 - XSS Filter主要针对反射型XSS，大体上采用的都是一种启发式的检测，根据用户提交的参数判断是否是潜在的XSS特性，并重新渲染响应内容保证潜在的XSS特性不会触发
 - 响应头crlf注入绕过
-- 针对同域的白名单：严格来说，针对同域的白名单机制不是绕过，而是浏览器的性质，这种性质给反射型XSS的利用提供了便利，IE和Chrome在这个机制上不太一样；IE会判断Referer来源是否是本域，如果是，则XSS Filter不生效；Chrome的同域白名单机制和IE完全不一样。如果是<script>嵌入同域内的js文件，XSS Filter就不会防御，这个受CSP策略的影响；
+- 针对同域的白名单：严格来说，针对同域的白名单机制不是绕过，而是浏览器的性质，这种性质给反射型XSS的利用提供了便利，IE和Chrome在这个机制上不太一样；IE会判断Referer来源是否是本域，如果是，则XSS Filter不生效；Chrome的同域白名单机制和IE完全不一样。如果是`<script>`嵌入同域内的js文件，XSS Filter就不会防御，这个受CSP策略的影响；
 - 场景依赖性高的绕过
 
 #### 6.7.混淆的代码
@@ -253,13 +253,13 @@
 - 浏览器特权区域风险
 - 浏览器扩展风险：浏览器为了丰富自身的功能，允许第三方提供各类插件或扩展，但这些扩展的权限如果没控制好，就会带来严重的后果
 - 跨子域：document.domain技术技巧：跨子域：document domain技巧非常好用，属于浏览器的性质；有一个合法的性质是：这个页面可以设置document.domain为当前子域或比当前子域更高级的域，一般顶级就到了根域；
-- 更多经典的跨域索引：1.利用UNC“跨域”：通过Internet域（http协议）的代码，比如<iframe>标签利用file协议调用本地的XSS漏洞页面，并通过这个本地XSS执行任意的JavaScript代码，由于是file协议，权限会更大，比如，利用AJAX读取本地文件；2.mhtml:协议跨域；
+- 更多经典的跨域索引：1.利用UNC“跨域”：通过Internet域（http协议）的代码，比如`<iframe>`标签利用file协议调用本地的XSS漏洞页面，并通过这个本地XSS执行任意的JavaScript代码，由于是file协议，权限会更大，比如，利用AJAX读取本地文件；2.mhtml:协议跨域；
 
 #### 7.7.XSS Proxy技术
 - XSS Proxy技术用到了基于浏览器的远程控制上，这是一种非常好的思想，现在很多XSS利用框架，如XSS Shell、BeEF、Anehta等远程控制都是基于XSS Proxy的
 - 要实现远程控制，必须具备以下两个条件：远控指令要在目标浏览器上“实时”执行；执行结果要能够让控制端看到
 - XSS Proxy技术的4种思路，各有千秋
-- 浏览器`[script]`请求：<script>标签请求内容可跨域，这是合法的功能，请求到的数据必须是合法的JavaScript语法格式；包括请求回来的是JSON+CallBack函数这样的数据内容（这种跨域数据通信被称为JSONP）；
+- 浏览器`[script]`请求：`<script>`标签请求内容可跨域，这是合法的功能，请求到的数据必须是合法的JavaScript语法格式；包括请求回来的是JSON+CallBack函数这样的数据内容（这种跨域数据通信被称为JSONP）；
 - 浏览器跨域ajax请求：跨域AJAX请求也需要浏览器setInterval去主动发起服务端指令接口请求。唯一的好处是，这种请求时异步发起的，会显得更加安静；
 - 服务端websocket推送指令：严格地说，WebSocket技术不属于HTML5，这个技术是对HTTP无状态连接的一种革新，本质就是一种持久性socket连接，在浏览器客户端通过JavaScript进行初始化连接后，就可以监听相关的事件和调用socket方法来对服务端的消息进行读写操作；
 - postMessage方式推送指令：HTML5的postMessage机制非常完美，是客户端最直接的跨文档传输方法，一般用在iframe中父页与子页之间的客户端跨域通信；这个技巧如果用于XSS Proxy上可能有些绕，攻击者需要动态生成，然后在客户端进行跨域传输指令。这是一种思路，不过不好；
@@ -270,7 +270,7 @@
 #### 8.1.新标签和新属性绕过黑名单策略
 - 白名单和黑名单过滤器策略是防御XSS攻击的重要方法
 - 跨站中的黑名单策略
-- 新元素突破黑名单策略：要绕过这种黑名单策略，一种方法就是跨站师使用变形后的代码绕过正则表达式的语义范围。另一种情况是下面将要提到的HTML5新标签和新属性；1.HTML5中可以利用到的新标签有音频标签<audio>和视频标签<video>；2.HTML5中可以利用到的新属性有formation、onformchange、onforminput、autofocus等；
+- 新元素突破黑名单策略：要绕过这种黑名单策略，一种方法就是跨站师使用变形后的代码绕过正则表达式的语义范围。另一种情况是下面将要提到的HTML5新标签和新属性；1.HTML5中可以利用到的新标签有音频标签`<audio>`和视频标签`<video>`；2.HTML5中可以利用到的新属性有formation、onformchange、onforminput、autofocus等；
 
 #### 8.2.HistoryAPI中的新方法
 - pushstate()和replacestate()：HTML5的History API中新增加了两个新方法pushState()和replaceState()。可以在不刷新页面的情况下添加和修改历史条目
@@ -302,14 +302,14 @@
 - 蠕虫需要追求原生态：框架封装了太多优秀的函数，对XSS来说，直接调用就好，可以省去许多自定义代码的麻烦，而且可以大大减少XSS蠕虫的大小，这样的XSS蠕虫就是原生态的；1.代码的原生态：简单的几行代码就可以发起GET或POST请求，而且使用原生态的框架还有一个好处，它帮我们处理了各种浏览器兼容的问题；2.攻击效果的原生态：那些DIV框、UI组件都是可以直接调用一些高度封装的JavaScript函数来生成；
 
 #### 9.3.CSRF蠕虫
-- 关于原理和危害性：CSRF蠕虫的原理和XSS蠕虫基本类似，只是这里用到的是CSRF，攻击代码存在于攻击者页面中，目标网站传播的内容都包含攻击者页面URL，这样才能诱惑目标网站上的被攻击者打开攻击者页面，然后触发CSRF，CSRF会继续跨域发布含攻击者页面URL的内容进行传播；和XSS蠕虫不一样的是：XSS蠕虫的攻击代码本质上是存放在目标网站上的，即使是<script>从攻击者域上引用进来，对JavaScript上下文来说，也属于目标网站；CSRF蠕虫的危害性大多与XSS蠕虫一样，如：获取用户隐私、对用户数据进行恶意操作、散播广告、传播网页木马、传播舆情等；
+- 关于原理和危害性：CSRF蠕虫的原理和XSS蠕虫基本类似，只是这里用到的是CSRF，攻击代码存在于攻击者页面中，目标网站传播的内容都包含攻击者页面URL，这样才能诱惑目标网站上的被攻击者打开攻击者页面，然后触发CSRF，CSRF会继续跨域发布含攻击者页面URL的内容进行传播；和XSS蠕虫不一样的是：XSS蠕虫的攻击代码本质上是存放在目标网站上的，即使是`<script>`从攻击者域上引用进来，对JavaScript上下文来说，也属于目标网站；CSRF蠕虫的危害性大多与XSS蠕虫一样，如：获取用户隐私、对用户数据进行恶意操作、散播广告、传播网页木马、传播舆情等；
 - 译言CSRF蠕虫：攻击代码可以做得非常隐蔽，顺便加上了Referer判断。而蠕虫代码就是靠得到的这个Referer值进行后续操作的。由于Ajax无法跨域获取操作第三方服务器上的资源，于是使用了服务端代理来完全跨域获取数据的操作（Microsoft.XMLHTTP控件的使用）；有一点要强调下，蠕虫传播的前提是目标用户登录了目标网站，然后才能看到消息并中招，之后的传播必定会带上目标用户的内存Cookie，所以这个过程不受限于IE下的本地CookieP3P策略的声明；
 - 饭否CSRF蠕虫-邪恶的Flash游戏：饭否CSRF蠕虫是利用Flash进行传播的，本质上是该Flash文件里的ActionScript脚本向饭否发起CSRF请求；CSRF请求有两种：一种是Get请求获取攻击者相关的隐私数据。第二种是POST请求提交数据，使得被攻击者自动发送一条微博消息并向自己的好友都发一条私信；这些Web蠕虫都是基于用户群的，需要大量的用户参与，借用户交互之势而传播，而用户之间却存在一种信任关系，一般情况下，如果是自己的好友给自己发消息，都会去看，因为彼此很信任，饭否的这个蠕虫传播正是利用了这个特性；
 - CSRF蠕虫存在的可能性分析：顾名思义，CSRF蠕虫就是利用CSRF技术进行传播的Web蠕虫，前者的译言CSRF蠕虫以及相关分析文章说明了CSRF蠕虫存在的事实，译言网站的这个CSRF是由用户驱动的，蠕虫的代码都存放于另外一个网站上；要解决的最关键的问题就是CSRF蠕虫的传播性，即基于用户驱动的传播性（主动或者被动）；跨域获取数据的几种方式：CSRF蠕虫传播必须面对的问题是如何获取各种必要的唯一值。这里有三种方式：服务端代理技术、FlashAS跨域请求技术、JSONHijacking技术；通过对CSRF蠕虫传播原理的分析，许多广泛存在CSRF漏洞的Web2.0网站都面临着CSRF蠕虫的威胁。Web2.0蠕虫由用户驱动（被动的或主动的），加上一些社工技巧，这将很难防御；
 
 #### 9.4.ClickJacking蠕虫
 - ClickJacking蠕虫的由来：2009年初Twitter上发生的“Don't Click”蠕虫事件；
-- ClickJacking蠕虫技术原理分析：技术分析：首先，攻击者使用ClickJacking技术制作蠕虫页面，该页面的URL地址使用TINYURL短地址转http://tinyurl.com/amgzs6；设计要点：对iframe和button标签进行CSS样式设定，放置iframe标签所在层为透明层，使iframe标签所在层位于button标签所在层的正上方；要发动ClickJacking蠕虫攻击，满足以下两点必要条件即可（在SNS社区网络中，找到一个可以直接使用HTTP的GET方式提交数据的页面；这个页面可以被<iframe>标签包含；）
+- ClickJacking蠕虫技术原理分析：技术分析：首先，攻击者使用ClickJacking技术制作蠕虫页面，该页面的URL地址使用TINYURL短地址转http://tinyurl.com/amgzs6；设计要点：对iframe和button标签进行CSS样式设定，放置iframe标签所在层为透明层，使iframe标签所在层位于button标签所在层的正上方；要发动ClickJacking蠕虫攻击，满足以下两点必要条件即可（在SNS社区网络中，找到一个可以直接使用HTTP的GET方式提交数据的页面；这个页面可以被`<iframe>`标签包含；）
 - Facebook的LikeJacking蠕虫：Facebook遭遇的LikeJacking蠕虫攻击；Facebook中有一项插件服务，叫“Like Button”。用户可以在自己的博客或自己的网站中加入“Like Button”，访客浏览时，可以单击这个按钮表示自己喜欢这篇文章。当单击结束后，访客点击的状态信息会在访客的Facebook页面上以状态更新的方式显示出来；攻击者可以使用ClickJacking技术欺骗访客单击这个“Like Button”；
 - GoogleReader的ShareJacking蠕虫：非常流行的“一键分享”功能插件；这种插件可以让用户把在网络中看到的好文章或好资源直接以广播消息的形式发布到自己的社区和好友们进行分享；除了发现Google Reader存在ShareJacking蠕虫攻击外，还发现国内SNS环境中腾讯微博、腾讯空间、腾讯朋友、搜狐微博、人人网、淘江湖均存在这种攻击；
 - ClickJacking蠕虫爆发的可能性：分享已经是当前SNS网络中一个很重要的社交内容。只要是带有共享性质的网络社区，都有可能会遭受到ClickJacking蠕虫的攻击；Twitter的一键分享页面http://twitter.com/intent/tweet已经在HTTP头关键字中加入X-FRAME-OPTIONS来抵御ClickJacking攻击，Facebook的一键分享页面http://www.facebook.com/sharer/sharer.php中也使用了Frame Busting脚本来进行抵御；
@@ -318,14 +318,14 @@
 
 #### 10.1.浏览器厂商的防御
 - HTTP响应的X-头部：HTTP响应的扩展头部字段都以X-打头，用于区分标准的头部字段；与前端安全有关的头部字段有如下几个：X-Frame-Options、X-XSS-Protection、X-Content-Security-Policy；1.X-Frame-Options的值有以下两个：DENY（禁止被加载进任何frame）、SAMEORIGIN（仅允许被加载进同域内的frame）；2.X-XSS-Protection的值有以下三个：0（表示禁用）、1（默认，对危险脚本做一些标志或修改，以阻止在浏览器上渲染执行，Chrome和IE这方面的行为是有差异的）、1:mode=block（强制不渲染，在Chrome下直接跳转到空白页，在IE下返回一个#符号）；
-- 迟到的CSP策略：前面提到Web前端混乱局面，比如IE下的CSS的expression可以写JavaScript，再如，HTML的标签<script>、标签on事件、标签style属性、标签src/href/action等属性都可以内嵌JavaScript执行；HTML仅做HTML的事，JavaScript/CSS都通过加载独立文件的方式被执行。JavaScript/CSS独立文件所在的域可以配置为白名单，这样就能有效地防止加载攻击者域上的相关资源文件。这大大提高了XSS攻击的难度，这就是CSP策略的最大设计初衷；CSP策略使得Web前端更有序，从而更安全，这是一个好趋势，W3C已经在大力推进这样的策略；目前，Chrome支持CSP策略的头部是X-WebKit-CSP，而不是标准的X-Content-Security-Policy；下面举几个应用CSP的场景（1、不允许任何外部的资源加载，且允许内嵌脚本执行；2、仅允许白名单的外部资源加载，不允许内嵌脚本执行；）
+- 迟到的CSP策略：前面提到Web前端混乱局面，比如IE下的CSS的expression可以写JavaScript，再如，HTML的标签`<script>`、标签on事件、标签style属性、标签src/href/action等属性都可以内嵌JavaScript执行；HTML仅做HTML的事，JavaScript/CSS都通过加载独立文件的方式被执行。JavaScript/CSS独立文件所在的域可以配置为白名单，这样就能有效地防止加载攻击者域上的相关资源文件。这大大提高了XSS攻击的难度，这就是CSP策略的最大设计初衷；CSP策略使得Web前端更有序，从而更安全，这是一个好趋势，W3C已经在大力推进这样的策略；目前，Chrome支持CSP策略的头部是X-WebKit-CSP，而不是标准的X-Content-Security-Policy；下面举几个应用CSP的场景（1、不允许任何外部的资源加载，且允许内嵌脚本执行；2、仅允许白名单的外部资源加载，不允许内嵌脚本执行；）
 
 #### 10.2.Web厂商的防御
 - 域分离：域分离做得好的可以参考Google，Google将一些业务关联性小的内容转移到了不相干的域中
 - 安全传输：Google很多重要的业务都完美地支持HTTPS安全传输（包括搜索）。安全传输可以有效地防止局域内的明文抓包
 - 安全的Cookie：可以学学Google，某些身份认证相关的Cookie肯定严格设置为HTTPS传输，肯定是HttpOnly标志，这样XSS即使盗取了Cookie，也无法正确使用
 - 优秀的验证码：验证码的出现肯定降低了用户体验，但是这个降低阈值是可以控制好的；Google的验证码公认是比较安全的（字母连着、扭曲变形、线条平滑、无噪等），暴力破解很困难，这也带来了用户体验上的尴尬，经常会输错验证码，说明Google非常重视安全，宁可牺牲一点用户体验；
-- 慎防第三方内容：第三方内容的安全性是经常被大家提起的，常见的有以下几种形式：<script>引用第三方js文件；<iframe>引用第三方HTML文件；<object>等引用第三方Flash等资源
+- 慎防第三方内容：第三方内容的安全性是经常被大家提起的，常见的有以下几种形式：`<script>`引用第三方js文件；`<iframe>`引用第三方HTML文件；`<object>`等引用第三方Flash等资源
 - XSS防御方案：一些防御策略（输入校验：长度限制、值类型是否正确、是否包含特殊字符等；输出编码：根据输出的位置进行相应的编码，如HTML编码、JavaScript编码、URL编码；）
 - CSRF防御方案：针对CSRF攻击的防御，目前常用的有以下几种策略（1.检查HTTP Referer字段是否同域；2.限制Session Cookie的生命周期；3.使用验证码；4.使用一次性token；）；一般防御CSRF有三种方法：判断Referer、验证码、token；验证码的弊端很明显：会对用户造成影响；token存在的问题是：时效性无法保证；token防CSRF的原理是：无法通过AJAX等方式获得外域页面中的token值，XMLHttpRequest需要遵守浏览器同源策略；而临时Cookie的原理是：Cookie只能在父域和子域之间设置，也遵守同源策略；
 - 界面操作劫持防御：基于界面操作劫持的攻击模式是用巧妙的视觉欺骗的方式，对Web会话进行劫持；基于界面操作劫持的攻击模式是用巧妙的视觉欺骗的方式，对Web会话进行劫持；目前针对界面操作劫持的防御有以下几种（1.X-Frame-Options防御：由微软提出来的防御界面操作劫持的一种方法，Web开发人员可以在HTTP响应头中加入一个X-Frame-Options头，浏览器会根据X-Frame-Options字段中的参数来判断页面是否可以被iframe嵌入；2.Frame Busting脚本防御：使用JavaScript脚本来对页面进行控制，达到页面无法被iframe嵌入的目的，这样的防护脚本被称为Frame Busting脚本；3.使用token进行防御：在业界主流的防御界面操作劫持攻击的方法中，似乎并没有提及防御CSRF中的token也可以对其进行防御；）；X-Frame和Frame Busting方法都可以做到对界面操作劫持的防御。相对而言，X-Frame-Options的方式还是比Frame Busting更安全。X-Frame-Options是在浏览器中嵌入的，而Frame Busting是脚本控制。这意味着JavaScript代码始终有被突破的可能性；
