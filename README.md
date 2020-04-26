@@ -1,4 +1,4 @@
-## JavaScript书籍精读系列文章导航
+## JavaScript书籍精读笔记系列导航
 
 ### 写在前面
 - 去年我整理了一份[「前端工程师必备书籍清单.md」](https://github.com/yzsunlei/awesome-web-tutorial/blob/master/1.%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%BF%85%E5%A4%87%E4%B9%A6%E7%B1%8D%E6%B8%85%E5%8D%95.md)，得到很多人的关注。这份清单里面的书籍大部分我都看过了，但有些知识点难免看后就忘。之前看这些书对一些重点都进行了记录，最近一段时间计划把这些重点笔记整理下来。一方面让自己能通过快速翻阅来拾起知识点，另一方面希望能与更多志同道合的技术人进行交流。
@@ -19,42 +19,58 @@
 * L - 附加系列
 
 ### A - HTML/HTML5系列
-
+- 《HTML5秘籍》
+- 《HTML5_Canvas详解》
 
 ### B - CSS/CSS3系列
-
+- 《响应式web设计HTML5和CSS3实践》
+- 《CSS世界》
 
 ### C - JavaScript基础
-
+- 《JavaScript语言精粹》
+- 《学习JavaScript数据结构与算法（第2版）》
+- 《你不知道的JavaScript（上卷）》
 
 ### D - JavaScript应用
 - [《基于MVC的JavaScript Web富应用开发》](https://github.com/yzsunlei/javascript-book-reading/blob/master/D.%E3%80%8A%E5%9F%BA%E4%BA%8EMVC%E7%9A%84JavaScript%20Web%E5%AF%8C%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E3%80%8B_Alex%20MacCaw_%E6%9D%8E%E6%99%B6%E7%AD%89.md)
 - [《移动WEB前端高级开发实践》](https://github.com/yzsunlei/javascript-book-reading/blob/master/D.%E3%80%8A%E7%A7%BB%E5%8A%A8WEB%E5%89%8D%E7%AB%AF%E9%AB%98%E7%BA%A7%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5%E3%80%8B_iKcamp.md)
+- 《单页Web应用：JavaScript从前端到后端》
+- 《第三方JavaScript编程》
 
 ### E - JavaScript进阶
 - [《JavaScript异步编程》](https://github.com/yzsunlei/javascript-book-reading/blob/master/E.%E3%80%8AJavaScript%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B%E3%80%8B_Trevor%20Burnham_%E8%AE%B8%E9%9D%92%E6%9D%BE.md)
+- 《JavaScript框架设计（第二版）》
 
 ### F - JQuery类库
-
+- 《jQuery技术内幕-深入解析jQuery架构设计与实现原理》
 
 ### G - MVVM框架
 - [《React Native精解与实战》](https://github.com/yzsunlei/javascript-book-reading/blob/master/G.%E3%80%8AReact%20Native%E7%B2%BE%E8%A7%A3%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%8B_%E9%82%B1%E9%B9%8F%E6%BA%90.md)
+- 《React Native移动开发实战》
+- 《Vue.js权威指南》
 
 ### H - 前端工程化
-
+- 《前端工程化：体系设计与实践》
+- 《前端架构设计》
+- 《现代前端技术解析》
 
 ### I - ES6+系列
-
+- 《ES6标准入门（第三版）》
 
 ### J - HybirdApp系列
-
+- 《React Native应用开发实例解析》
 
 ### K - Node.js系列
-
+- 《深入浅出Node.js》
+- 《Node.js调试指南》
+- 《Node.js设计模式》
 
 ### L - 附加系列
 - [《Web前端黑客技术揭秘》](https://github.com/yzsunlei/javascript-book-reading/blob/master/L.%E3%80%8AWeb%E5%89%8D%E7%AB%AF%E9%BB%91%E5%AE%A2%E6%8A%80%E6%9C%AF%E6%8F%AD%E7%A7%98%E3%80%8B_%E9%92%9F%E6%99%A8%E9%B8%A3.md)
+- 《微服务设计》
+- 《算法图解》
 
 ### 写在最后
+- 本系列仓库地址：[https://github.com/yzsunlei/javascript-book-reading](https://github.com/yzsunlei/javascript-book-reading)，觉得有用，记得star收藏
 - 为了方便在手机上查看，后面我会把这些笔记陆续发布到公众号“派三派四”，可以扫码关注一下，欢迎关注。
 ![扫码关注公众号](http://cdn.yzsunlei.com/pai_study/qrcode_for_gh_ef1e79fe4f71_258.jpg)
