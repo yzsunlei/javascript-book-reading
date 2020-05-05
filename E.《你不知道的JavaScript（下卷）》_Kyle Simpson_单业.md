@@ -1,5 +1,10 @@
 ﻿## 《你不知道的JavaScript（下卷）》精读笔记
 
+### 写在前面
+- 书籍介绍：JavaScript这门语言简单易用，很容易上手，但其语言机制复杂微妙，即使是经验丰富的JavaScript开发人员，如果没有认真学习的话也无法真正理解。本套书直面当前JavaScript开发人员不求甚解的大趋势，深入理解语言内部的机制，全面介绍了JavaScript中常被人误解和忽视的重要知识点。
+- 我的简评：《你不知道的JavaScript》系列分上中下三卷，这里是下卷，主要讲解ES6相关的。该系列书籍本人觉得就上卷写的不错，中卷有些冗余，下卷讲ES6比较粗糙。不过有空翻一翻，还是多少有些收获。
+- ！！文末有pdf书籍、笔记思维导图、随书代码打包下载地址，需要请自取
+
 ### 第1章 ES？现在与未来
 - 与ES5不同，ES6并不仅仅是为这个语言新增一组API。它包括一组新的语法形式，其中的一部分可能是要花些时间才能理解和熟悉的。它还包括各种各样的新的组织形式和操作各种数据类型的新的辅助API
 
@@ -306,3 +311,9 @@
 - 最近（以及不久的将来）JavaScript语言设计修改上的最大压力之一就是需要成为更适合从其他语言（比如C/C++、ClojureScript）变换/交叉编译的目标语言
 - ASM.js是合法JavaScript的一个子集，这个子集最严格地限制了那些使得JavaScript引擎难以优化的行为。结果就是兼容ASM.js的代码运行在支持ASM的引擎上时效率有巨大的提升，几乎与原生优化的等价C程序相当
 - WASM提出了一种代码的高度压缩AST（语法树）二进制表示格式，然后可以直接向JavaScript引擎发出指令，而它的基础结构，不需要通过JavaScript解析，甚至不需要符合JavaScript的规则
+
+### 写在后面
+- pdf书籍、笔记思维导图、随书代码打包下载地址：[https://pan.baidu.com/s/1B7zxELusmjiGHPsVProlXg(提取码：kb1v)](https://pan.baidu.com/s/1B7zxELusmjiGHPsVProlXg)
+- 纸质书京东购买地址：[https://u.jd.com/FwSmuH](https://u.jd.com/FwSmuH)（推荐购买纸质书来学习）
+- 为了方便在手机上查看，后面我会把这些笔记陆续发布到公众号“派三派四”，可以扫码关注一下，欢迎关注。
+  ![扫码关注公众号](http://cdn.yzsunlei.com/pai_study/qrcode_for_gh_ef1e79fe4f71_258.jpg)
