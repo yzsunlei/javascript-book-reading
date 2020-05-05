@@ -1,5 +1,10 @@
 ﻿## 《React进阶之路》精读笔记
 
+### 写在前面
+- 书籍介绍：《React进阶之路》详细介绍了React技术栈涉及的主要技术。本书分为基础篇、进阶篇和实战篇三部分。基础篇主要介绍React的基本用法，包括React 16的新特性；进阶篇深入讲解组件state、虚拟DOM、高阶组件等React中的重要概念，同时对初学者容易困惑的知识点做了介绍；实战篇介绍React Router、Redux和MobX 3个React技术栈的重要成员，并通过实战项目讲解这些技术如何和React结合使用。
+- 我的简评：这本书适合初级的React开发者，书名虽是进阶，实际上就是一本入门的书。书中对一些React用法总结的还挺不错，实践性比较强。
+- ！！文末有pdf书籍、笔记思维导图、随书代码打包下载地址，需要请自取
+
 ### 1.初识React
 
 #### 1.1.简介
@@ -164,3 +169,9 @@
 - React Router引起的组件重复渲染问题
 - Immutable.js：Redux的state必须是不可变对象，reducer中每次返回的state都是一个新对象；Immutable.js的作用在于以更高效的方式创建不可变对象；主要3个优点（保证数据的不可变、丰富的API、优异的性能）
 - Reselect：Redux state的任意改变都会导致所有容器组件的mapStateToProps的重新调用，进而导致使用到的selectors重新计算；Reselect可以创建具有记忆功能的selectors，当selectors计算使用的参数未发生变化时，不会再次计算，而是直接使用上次缓存的计算结果；
+
+### 写在后面
+- pdf书籍、笔记思维导图、随书代码打包下载地址：[https://pan.baidu.com/s/1Ko54i7zWfUSlND-JPVN3fA(提取码：jtv0)](https://pan.baidu.com/s/1Ko54i7zWfUSlND-JPVN3fA)
+- 纸质书京东购买地址：[https://u.jd.com/wnGjvI](https://u.jd.com/wnGjvI)（推荐购买纸质书来学习）
+- 为了方便在手机上查看，后面我会把这些笔记陆续发布到公众号“派三派四”，可以扫码关注一下，欢迎关注。
+  ![扫码关注公众号](http://cdn.yzsunlei.com/pai_study/qrcode_for_gh_ef1e79fe4f71_258.jpg)
