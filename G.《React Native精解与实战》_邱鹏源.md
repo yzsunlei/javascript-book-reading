@@ -318,7 +318,7 @@
 - 4.资源优化：React Native最终会将所有的资源文件打包成一个Bundle文件；控制Bundle的尺寸大小；除tab图标外其他的图片资源文件可以通过网络加载的方式进行加载，或者从图片CDN上加载；Bundle文件还可以进行拆分，让资源文件按需加载；
 
 ### 写在后面
-- pdf书籍、笔记思维导图、随书代码打包下载地址：[https://pan.baidu.com/s/1ZJz711DrCfGRkqdlkx_HZg(提取码：b4yg)](https://pan.baidu.com/s/1ZJz711DrCfGRkqdlkx_HZg)
+- pdf书籍、笔记思维导图、随书代码打包下载地址：[https://pan.baidu.com/s/1y48Ngde8vmfFZvOLFhdECg(提取码：lj1b)](https://pan.baidu.com/s/1y48Ngde8vmfFZvOLFhdECg)
 - 纸质书京东购买地址：[https://u.jd.com/OuBeOf](https://u.jd.com/OuBeOf)（推荐使用纸质书来学习）
 - 为了方便在手机上查看，后面我会把这些笔记陆续发布到公众号“派三派四”，可以扫码关注一下，欢迎关注。
   ![扫码关注公众号](http://cdn.yzsunlei.com/pai_study/qrcode_for_gh_ef1e79fe4f71_258.jpg)

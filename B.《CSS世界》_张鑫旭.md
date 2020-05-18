@@ -254,7 +254,7 @@
 - @font face与字体图标技术：从面向未来的角度讲，字体图标技术的使用会越来越边缘化，因为和SVG图标技术相比，其唯一的优势就是兼容一些老的IE浏览器；SVG图标同样是矢量的，同样颜色可控，但资源占用更少，加载体验更好，呈现效果更佳，更加符合语义，我个人是非常推崇SVG图标的；两个需要关注的东西，一个是字体，另一个是字符，而这两个东西就是字体图标技术的本质所在；字体图标技术就是使用类似的原理实现的，即把通常的字符映射成为另外的图标形状；
 
 ### 写在后面
-- pdf书籍、笔记思维导图、随书代码打包下载地址：[https://pan.baidu.com/s/1qFeNdf9NTcrpJd-UADCicQ(提取码：lxrn)](https://pan.baidu.com/s/1qFeNdf9NTcrpJd-UADCicQ)
+- pdf书籍、笔记思维导图、随书代码打包下载地址：[https://pan.baidu.com/s/1B9N5zFObIq4NU4QpSM5dZQ(提取码：lp46)](https://pan.baidu.com/s/1B9N5zFObIq4NU4QpSM5dZQ)
 - 纸质书京东购买地址：[https://u.jd.com/u8b3mt](https://u.jd.com/u8b3mt)（推荐使用纸质书来学习）
 - 为了方便在手机上查看，后面我会把这些笔记陆续发布到公众号“派三派四”，可以扫码关注一下，欢迎关注。
   ![扫码关注公众号](http://cdn.yzsunlei.com/pai_study/qrcode_for_gh_ef1e79fe4f71_258.jpg)

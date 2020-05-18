@@ -171,7 +171,7 @@
 - Reselect：Redux state的任意改变都会导致所有容器组件的mapStateToProps的重新调用，进而导致使用到的selectors重新计算；Reselect可以创建具有记忆功能的selectors，当selectors计算使用的参数未发生变化时，不会再次计算，而是直接使用上次缓存的计算结果；
 
 ### 写在后面
-- pdf书籍、笔记思维导图、随书代码打包下载地址：[https://pan.baidu.com/s/1Ko54i7zWfUSlND-JPVN3fA(提取码：jtv0)](https://pan.baidu.com/s/1Ko54i7zWfUSlND-JPVN3fA)
+- pdf书籍、笔记思维导图、随书代码打包下载地址：[https://pan.baidu.com/s/15g8dwBHcPJBVEmO7mlh52g(提取码：zfjg)](https://pan.baidu.com/s/15g8dwBHcPJBVEmO7mlh52g)
 - 纸质书京东购买地址：[https://u.jd.com/wnGjvI](https://u.jd.com/wnGjvI)（推荐购买纸质书来学习）
 - 为了方便在手机上查看，后面我会把这些笔记陆续发布到公众号“派三派四”，可以扫码关注一下，欢迎关注。
   ![扫码关注公众号](http://cdn.yzsunlei.com/pai_study/qrcode_for_gh_ef1e79fe4f71_258.jpg)

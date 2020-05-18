@@ -338,7 +338,7 @@
 - SNS里的攻击围绕着信任关系进行的，其特点是：人们往往信任自己熟悉的人，信任程度的高低一般取决于熟悉的程度与目标本身的信誉
 
 ### 写在后面
-- pdf书籍、笔记思维导图、随书代码打包下载地址：[https://pan.baidu.com/s/1CItemx1hsDgxnE25kbX0fg（提取码：uloo）](https://pan.baidu.com/s/1CItemx1hsDgxnE25kbX0fg )
+- pdf书籍、笔记思维导图、随书代码打包下载地址：[https://pan.baidu.com/s/1qVEU2uaPPhGTg7tNii7U7w(提取码：tvxh)](https://pan.baidu.com/s/1qVEU2uaPPhGTg7tNii7U7w)
 - 纸质书京东购买地址：[https://u.jd.com/R5ve7p](https://u.jd.com/R5ve7p)（推荐使用纸质书来学习）
 - 为了方便在手机上查看，后面我会把这些笔记陆续发布到公众号“派三派四”，可以扫码关注一下，欢迎关注。
   ![扫码关注公众号](http://cdn.yzsunlei.com/pai_study/qrcode_for_gh_ef1e79fe4f71_258.jpg)

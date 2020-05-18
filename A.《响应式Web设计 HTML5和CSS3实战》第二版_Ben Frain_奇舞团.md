@@ -1,4 +1,4 @@
-﻿## 《响应式Web设计 HTML5和CSS3实战》第二版精读笔记
+﻿## 《响应式Web设计 HTML5和CSS3实战(第二版)》精读笔记
 
 ### 写在前面
 - 书籍介绍：本书主要讲解了如何运用HTML5和CSS3来进行响应式Web设计，使页面的设计与开发根据用户行为以及设备环境(系统平台、屏幕尺寸、屏幕定向等)来进行相应的响应和调整。
@@ -362,7 +362,7 @@
 - 分层的用户体验：基本体验是站点的最小可行版本，而增强体验则是包括所有功能并且最为美观的版本
 
 ### 写在后面
-- pdf书籍、笔记思维导图、随书代码打包下载地址：[https://pan.baidu.com/s/137l2WVCYkpQmTn0X5EOZBQ(提取码：763e)](https://pan.baidu.com/s/137l2WVCYkpQmTn0X5EOZBQ)
+- pdf书籍、笔记思维导图、随书代码打包下载地址：[https://pan.baidu.com/s/1rZGRe0gzyEKiV9y5qmsgbg(提取码：fo49)](https://pan.baidu.com/s/1rZGRe0gzyEKiV9y5qmsgbg)
 - 纸质书京东购买地址：[https://u.jd.com/0T3tQp](https://u.jd.com/0T3tQp)（推荐使用纸质书来学习）
 - 为了方便在手机上查看，后面我会把这些笔记陆续发布到公众号“派三派四”，可以扫码关注一下，欢迎关注。
   ![扫码关注公众号](http://cdn.yzsunlei.com/pai_study/qrcode_for_gh_ef1e79fe4f71_258.jpg)
