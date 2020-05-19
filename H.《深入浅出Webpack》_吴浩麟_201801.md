@@ -1,5 +1,10 @@
 ﻿## 《深入浅出Webpack》精读笔记
 
+### 写在前面
+- 书籍介绍：《深入浅出Webpack》对Webpack进行了全面讲解，涵盖了Webpack入门、配置、实战、优化、原理等方面的内容。其中，第1章讲解Webpack入门所涉及的知识；第2章详细讲解Webpack提供的常用配置项；第3章结合实际项目中的常见场景进行实践；第4章给出优化Webpack的优秀方案；第5章剖析了Webpack的原理，并讲解如何开发Plugin和Loader；附录汇总了常见的Loader、Plugin和Webpack的其他学习资源。除了深入讲解Webpack，本书还介绍了ES6、TypeScript、PostCSS、Prepack、离线缓存、单页应用、CDN等Web开发相关的技能
+- 我的简评：市面上出版的讲解Webpack的书籍不多，本人觉得是前端打包工具迭代的太快了。Webpack目前还是前端打包工具的首选，值得去学。《深入浅出Webpack》这本书对Webpack讲解的比较详细，总结的比较全面，通俗易懂，还有一个亮点就是每一章节都带有例子。总得来说，还是很不错的一本书。
+- ！！福利：文末有pdf书籍、笔记思维导图、随书代码打包下载地址哦
+
 ### 第一章 入门
 
 #### 1.1.前端的发展
@@ -186,3 +191,10 @@
 
 #### 5.5.调试Webpack
 - 由于 Webpack 运行在 T、fode. 上，所以调试 Webpack 就相当于调试 Node.js 程序
+
+### 写在后面
+- pdf书籍、笔记思维导图、随书代码打包下载地址：[https://pan.baidu.com/s/1EpM6KV5Lu6nmGJG_j3iI2w(提取码：yxn1)](https://pan.baidu.com/s/1EpM6KV5Lu6nmGJG_j3iI2w)
+复制这段内容后打开百度网盘手机App，操作更方便哦
+- 纸质书京东购买地址：后面补上（推荐使用纸质书来学习）
+- 为了方便在手机上查看，后面我会把这些笔记陆续发布到公众号“派三派四”，可以扫码关注一下，欢迎关注。
+  ![扫码关注公众号](http://cdn.yzsunlei.com/pai_study/qrcode_for_gh_ef1e79fe4f71_258.jpg)
