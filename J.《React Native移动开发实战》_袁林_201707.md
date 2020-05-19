@@ -1,5 +1,10 @@
 ﻿## 《React Native移动开发实战》精读笔记
 
+### 写在前面
+- 书籍介绍：《React Native移动开发实战》全面涵盖React Native组件、API、布局、第三方组件及原生接口开发等内容；详解React Native的开发工具、命令行工具及各种调试工具的使用；详细讲解一个电商App项目案例的开发过程，提高读者的实战开发水平；涉及软件开发流程、应用架构设计、代码重构，以及原生平台与跨平台开发等。
+- 我的简评：《React Native移动开发实战》作为学习RN开发的入门书还是挺不错的，讲解的比较基础、比较全面，读完就能开发出一个完整的电商App项目。
+- ！！福利：文末有pdf书籍、笔记思维导图、随书代码打包下载地址哦
+
 ### 第一章 为什么要学习React Native
 
 #### 1.1.看透React Native
@@ -156,3 +161,9 @@ Cordova、以及基于 Apache Cordova 衍生的lnoic等；2、跨平台的语言
 - CodePush是微软提供的一套用于热更新 React Native 和 Apache Cordova应用的服务，提供 React Native 和 Apache Cordova 开发者直接部署移动应用更新给用户的云服务
 - CodePush作为一个中央仓库，开发者可以推送更新，然后应用从客户端查询更新
 - CodePush主要的功能和优势有：开源免费，CodePush源码托管在 GitHub；直接对用户部署代码更新；管理 Alpha 、Beta以及生产环境应用；支持 JavaScript 文件和图片资源的更新；支持 React Native 和 Apache Cordova 应用；
+
+### 写在后面
+- pdf书籍、笔记思维导图、随书代码打包下载地址：[https://pan.baidu.com/s/1G-FfptnZAJkCTV6cEzn9Iw(提取码：v1j8)](https://pan.baidu.com/s/1G-FfptnZAJkCTV6cEzn9Iw)
+- 纸质书京东购买地址：[https://u.jd.com/FTRdCq](https://u.jd.com/FTRdCq)（推荐购买纸质书来学习）
+- 为了方便在手机上查看，后面我会把这些笔记陆续发布到公众号“派三派四”，可以扫码关注一下，欢迎关注。
+  ![扫码关注公众号](http://cdn.yzsunlei.com/pai_study/qrcode_for_gh_ef1e79fe4f71_258.jpg)
