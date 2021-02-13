@@ -328,3 +328,7 @@
 8.3.4.  一般数据通过 Kafka （消息队列）上报到 Influxdb （分布式时序数据库〉中存储，最后通过 Grafana （可视化图表〉展示出来。
 8.3.5. 一个强大的开源日志管理系统 ELK （即 Elasticsearch Logstash Kibana ） 。
 8.3.6. PM2 官方也提供了 一个服务--Keymetrics 来进行性能数据的分析和展示 。
+
+
+### 写在后面
+- pdf书籍、笔记思维导图、随书代码打包下载地址：[https://pan.baidu.com/s/17oqNU-kLcWYIcMupJqYVHA(提取码：1abm)](https://pan.baidu.com/s/17oqNU-kLcWYIcMupJqYVHA)
