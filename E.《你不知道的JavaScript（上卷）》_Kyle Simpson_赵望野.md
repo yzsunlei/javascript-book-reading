@@ -284,5 +284,4 @@
 - 行为委托认为对象之间是兄弟关系，互相委托，而不是父类和子类的关系。我们可以选择在JavaScript中努力实现类机制，也可以拥抱更自然的[prototype]委托机制
 
 ### 写在后面
-- pdf书籍、笔记思维导图、随书代码打包下载地址：后面补上
-- 纸质书京东购买地址：[https://u.jd.com/FwSmuH](https://u.jd.com/FwSmuH)（推荐购买纸质书来学习）
+- pdf书籍、笔记思维导图、随书代码打包下载地址：[https://pan.baidu.com/s/1XVWKm6ENfb87Ws3vbltM1g(提取码：7gk8)](https://pan.baidu.com/s/1XVWKm6ENfb87Ws3vbltM1g)
